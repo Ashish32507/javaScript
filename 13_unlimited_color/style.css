@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.outer{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+h3{
+    font-size: 30px;
+}
+
+.inner button{
+    width: 70px;
+    font-size: 20px;
+    margin: 10px;
+}

@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: aliceblue;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    margin-top: 7rem;
+    position: relative;
+    height: 350px;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 2px solid white;
+    z-index: 10;
+    background-color: rgb(59, 57, 57);
+    opacity: 0.9;
+    border-radius: 10px;
+}
+.card button{
+    font-size: 15px;
+    padding: 5px;
+    background-color: rgb(59, 57, 57);
+    color: white;
+    outline: none;
+    border-color: white;
+}
+.card button:hover{
+    background-color: aliceblue;
+    color: black;
+    outline: none;
+}
+.card img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.upper{
+    height:100px;
+    width: 100px;
+    border: 2px solid rgb(231, 82, 107);
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left:400px;
+    /* animation:upperAnimation 1s all; */
+    animation:infinite upperAnimation;
+    animation-duration: 10s;
+    background-color: rgb(231, 82, 107);
+    z-index: 6;
+    box-shadow: 0px 5px 5px 5px rgb(231, 82, 107);
+}
+
+.lower{
+    height:100px;
+    width: 100px;
+    border: 2px solid rgb(86, 13, 189);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20px;
+    right:300px;
+    animation:infinite lowerAnimation;
+    animation-duration: 10s;
+    z-index: 6;
+    background-color: rgb(86, 13, 189);
+    box-shadow: 0px 5px 5px 5px rgb(86, 13, 189);
+}
+
+@keyframes upperAnimation {
+    0%{
+        top: 20px;
+        left:400px; 
+
+    }
+    50%{
+        top: 20px;
+        left:500px;
+        transform: scale(1.2); 
+    }
+    
+}
+@keyframes lowerAnimation {
+    0%{
+        bottom:20px;
+        right:300px;
+    }
+    50%{ 
+        bottom:20px;
+        right:500px;
+        transform: scale(1.2); 
+    }
+    
+}
+
+
+
+#modal{
+    height:200px;
+    width:400px;
+    background-color: aliceblue;
+    position: absolute;
+    opacity: 1;
+    margin-left: 35%;
+    margin-top: -10%;
+    z-index: 10;
+    scale:0;
+}
